@@ -201,6 +201,10 @@ p {
 	background-color: var(--clr-green-dark);
 }
 
+.tours .title {
+	grid-column: 1/-1;
+}
+
 /* HTML: <div class="loader"></div> */
 .loader {
 	margin: 10rem auto;
