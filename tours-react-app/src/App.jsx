@@ -2,16 +2,24 @@ import { useEffect, useState } from 'react'
 import Tours from './components/Tours'
 import Loader from './components/Loader'
 import Title from './components/Title'
+import Reviews from './components/Reviews'
+import Questions from './components/Questions'
+import { reviews, questions } from './data'
 
 const url = 'https://www.course-api.com/react-tours-project'
 
 function App() {
 	const [isLoading, setIsLoading] = useState(false)
 	const [tours, setTours] = useState([])
+	const [activeId, setActiveId] = useState(null)
 
 	const deleteTour = id => {
 		const newTours = tours.filter(tour => tour.id !== id)
 		setTours(newTours)
+	}
+
+	const toggleQuestion = (id) => {	
+			setActiveId(activeId === id ? 'null' : id)
 	}
 
 	const fetchTours = async () => {
@@ -57,6 +65,12 @@ function App() {
 			<Tours
 				tours={tours}
 				deleteTour={deleteTour}
+			/>
+			<Reviews reviews={reviews}/>
+			<Questions
+				questions={questions}
+				activeId={activeId}
+				toggleQuestion={toggleQuestion}
 			/>
 		</main>
 	)

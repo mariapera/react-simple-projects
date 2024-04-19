@@ -4,17 +4,19 @@ import Title from './Title'
 
 const Tours = ({ tours, deleteTour }) => {
 	return (
-		<section className='tours'>
+		<section className='section-tours'>
 			<Title>Our tours</Title>
-			{tours.map(tour => {
-				return (
-					<Tour
-						key={tour.id}
-						{...tour}
-						deleteTour={deleteTour}
-					/>
-				)
-			})}
+			<div className='tours'>
+				{tours.map(tour => {
+					return (
+						<Tour
+							key={tour.id}
+							{...tour}
+							deleteTour={deleteTour}
+						/>
+					)
+				})}
+			</div>
 		</section>
 	)
 }
