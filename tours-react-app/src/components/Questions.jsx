@@ -20,7 +20,7 @@ const Questions = ({ questions, activeId, toggleQuestion }) => {
 
 Questions.propTypes = {
 	questions: PropTypes.array,
-	activeId: PropTypes.string,
+	activeId: PropTypes.any,
 	toggleQuestion: PropTypes.func,
 }
 export default Questions

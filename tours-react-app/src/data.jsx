@@ -1,3 +1,14 @@
+import item1 from './images/item-1.jpeg'
+import item2 from './images/item-2.jpeg'
+import item3 from './images/item-3.jpeg'
+import item4 from './images/item-4.jpeg'
+import item5 from './images/item-5.jpeg'
+import item6 from './images/item-6.jpeg'
+import item7 from './images/item-7.jpeg'
+import item8 from './images/item-8.jpeg'
+import item9 from './images/item-9.jpeg'
+
+
 const reviews = [
 	{
 		id: 1,
@@ -57,4 +68,119 @@ const questions = [
 	},
 ]
 
-export  {reviews, questions}
+const menu = [
+	{
+		id: 1,
+		title: 'buttermilk pancakes',
+		category: 'breakfast',
+		price: 15.99,
+		img: item1,
+		desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+	},
+	{
+		id: 2,
+		title: 'diner double',
+		category: 'lunch',
+		price: 13.99,
+		img: item2,
+		desc: `vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats `,
+	},
+	{
+		id: 3,
+		title: 'godzilla milkshake',
+		category: 'shakes',
+		price: 6.99,
+		img: item3,
+		desc: `ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.`,
+	},
+	{
+		id: 4,
+		title: 'country delight',
+		category: 'breakfast',
+		price: 20.99,
+		img: item4,
+		desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, `,
+	},
+	{
+		id: 5,
+		title: 'egg attack',
+		category: 'lunch',
+		price: 22.99,
+		img: item5,
+		desc: `franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up `,
+	},
+	{
+		id: 6,
+		title: 'oreo dream',
+		category: 'shakes',
+		price: 18.99,
+		img: item6,
+		desc: `Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday`,
+	},
+	{
+		id: 7,
+		title: 'bacon overflow',
+		category: 'breakfast',
+		price: 8.99,
+		img: item7,
+		desc: `carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird `,
+	},
+	{
+		id: 8,
+		title: 'american classic',
+		category: 'lunch',
+		price: 12.99,
+		img: item8,
+		desc: `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `,
+	},
+	{
+		id: 9,
+		title: 'quarantine buddy',
+		category: 'shakes',
+		price: 16.99,
+		img: item9,
+		desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+	},
+]
+
+const jobs = [
+	{
+		id: 'recAGJfiU4CeaV0HL',
+		order: 3,
+		title: 'Full Stack Web Developer',
+		dates: 'December 2015 - Present',
+		duties: [
+			'Tote bag sartorial mlkshk air plant vinyl banjo lumbersexual poke leggings offal cold-pressed brunch neutra. Hammock photo booth live-edge disrupt.',
+			'Post-ironic selvage chambray sartorial freegan meditation. Chambray chartreuse kombucha meditation, man bun four dollar toast street art cloud bread live-edge heirloom.',
+			'Butcher drinking vinegar franzen authentic messenger bag copper mug food truck taxidermy. Mumblecore lomo echo park readymade iPhone migas single-origin coffee franzen cloud bread tilde vegan flexitarian.',
+		],
+		company: 'TOMMY',
+	},
+	{
+		id: 'recIL6mJNfWObonls',
+		order: 2,
+		title: 'Front-End Engineer',
+		dates: 'May 2015 - December 2015',
+		duties: [
+			'Hashtag drinking vinegar scenester mumblecore snackwave four dollar toast, lumbersexual XOXO. Cardigan church-key pabst, biodiesel vexillologist viral squid.',
+			'Franzen af pitchfork, mumblecore try-hard kogi XOXO roof party la croix cardigan neutra retro tattooed copper mug. Meditation lomo biodiesel scenester',
+			'Fam VHS enamel pin try-hard echo park raw denim unicorn fanny pack vape authentic. Helvetica fixie church-key, small batch jianbing messenger bag scenester +1',
+			'Fam VHS enamel pin try-hard echo park raw denim unicorn fanny pack vape authentic. Helvetica fixie church-key, small batch jianbing messenger bag scenester +1',
+		],
+		company: 'BIGDROP',
+	},
+	{
+		id: 'rec61x18GVY99hQq5',
+		order: 1,
+		title: 'Engineering Intern',
+		dates: 'May 2014 - September 2015',
+		duties: [
+			"I'm baby woke mumblecore stumptown enamel pin. Snackwave prism pork belly, blog vape four loko sriracha messenger bag jean shorts DIY bushwick VHS. Banjo post-ironic hella af, palo santo craft beer gluten-free.",
+			'YOLO drinking vinegar chambray pok pok selfies quinoa kinfolk pitchfork street art la croix unicorn DIY. Woke offal jianbing venmo tote bag, palo santo subway tile slow-carb post-ironic pug ugh taxidermy squid.',
+			'Pour-over glossier chambray umami 3 wolf moon. Iceland kale chips asymmetrical craft beer actually forage, biodiesel tattooed fingerstache. Pork belly lomo man braid, portland pitchfork locavore man bun prism.',
+		],
+		company: 'CUKER',
+	},
+]
+
+export  {reviews, questions, menu, jobs}

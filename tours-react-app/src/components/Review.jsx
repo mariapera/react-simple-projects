@@ -57,7 +57,7 @@ const Review = ({ reviews }) => {
 			<div className='img-container'>
 				<img
 					src={img}
-					href={name}
+					alt={name}
 					className='img review-img'
 				/>
 				<span className='img-icon'>

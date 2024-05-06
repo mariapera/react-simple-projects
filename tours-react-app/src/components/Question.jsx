@@ -19,10 +19,10 @@ const Question = ({ id, title, info, activeId, toggleQuestion }) => {
 }
 
 Question.propTypes = {
-	id: PropTypes.string,
+	id: PropTypes.number,
 	title: PropTypes.string,
 	info: PropTypes.string,
-	activeId: PropTypes.string,
+	activeId: PropTypes.any,
 	toggleQuestion: PropTypes.func,
 }
 export default Question

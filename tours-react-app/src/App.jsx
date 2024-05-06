@@ -4,28 +4,41 @@ import Loader from './components/Loader'
 import Title from './components/Title'
 import Reviews from './components/Reviews'
 import Questions from './components/Questions'
-import { reviews, questions } from './data'
+import Menu from './components/Menu'
+import Jobs from './components/Jobs'
+import { reviews, questions, menu as menuItems, jobs} from './data'
 
-const url = 'https://www.course-api.com/react-tours-project'
+const urlTours = 'https://www.course-api.com/react-tours-project'
+// const urlTabs = 'https://course-api.com/react-tabs-project'
 
 function App() {
 	const [isLoading, setIsLoading] = useState(false)
 	const [tours, setTours] = useState([])
 	const [activeId, setActiveId] = useState(null)
+	const [menu, setMenu] = useState(menuItems)
+	const [value, setValue] = useState(0)
 
 	const deleteTour = id => {
 		const newTours = tours.filter(tour => tour.id !== id)
 		setTours(newTours)
 	}
 
-	const toggleQuestion = (id) => {	
-			setActiveId(activeId === id ? 'null' : id)
+	const toggleQuestion = id => {
+		setActiveId(activeId === id ? 'null' : id)
+	}
+
+	const toggleCategory = category => {
+		if (category === 'all') {
+			setMenu(menuItems)
+			return
+		}
+		setMenu(menuItems.filter(item => item.category === category))
 	}
 
 	const fetchTours = async () => {
 		setIsLoading(true)
 		try {
-			const response = await fetch(url)
+			const response = await fetch(urlTours)
 			if (response.ok) {
 				const data = await response.json()
 				setTours(data)
@@ -35,14 +48,16 @@ function App() {
 		}
 		setIsLoading(false)
 	}
+
 	useEffect(() => {
 		fetchTours()
 	}, [])
 
+
 	if (isLoading) {
 		return (
 			<main className='main'>
-				<Loader/>
+				<Loader />
 			</main>
 		)
 	}
@@ -66,12 +81,17 @@ function App() {
 				tours={tours}
 				deleteTour={deleteTour}
 			/>
-			<Reviews reviews={reviews}/>
+			<Reviews reviews={reviews} />
 			<Questions
 				questions={questions}
 				activeId={activeId}
 				toggleQuestion={toggleQuestion}
 			/>
+			<Menu
+				menu={menu}
+				toggleCategory={toggleCategory}
+			/>
+			<Jobs jobs={jobs} value={value} setValue={setValue}/>
 		</main>
 	)
 }
