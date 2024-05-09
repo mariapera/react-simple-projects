@@ -3,6 +3,7 @@ import SigleColor from './SigleColor'
 import PropTypes from 'prop-types'
 
 const ColorList = ({ colors }) => {
+	const colorsLength = colors.length
 	return (
 		<section className='section-colors'>
 			{colors.map((color, index) => {
@@ -10,7 +11,8 @@ const ColorList = ({ colors }) => {
 					<SigleColor
 						key={nanoid()}
 						color={color}
-            index={index}
+						index={index}
+						colorsLength={colorsLength}
 					/>
 				)
 			})}

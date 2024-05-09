@@ -6,11 +6,12 @@ import Form from './Form'
 import ColorList from './ColorList'
 
 function App() {
-	const [colors, setColors] = useState(new Values('#150255').all(10))
+	const SHADE_NUMBER = 10
+	const [colors, setColors] = useState(new Values('#150255').all(SHADE_NUMBER))
 
 	const addColor = color => {
 		try {
-			const newColors = new Values(color).all(10)
+			const newColors = new Values(color).all(SHADE_NUMBER)
 			setColors(newColors)
 		} catch (error) {
 			toast.error(error.message)
@@ -21,7 +22,9 @@ function App() {
 		<main className='main'>
 			<ToastContainer position='top-center' />
 			<Form addColor={addColor} />
-			<ColorList colors={colors} />
+			<ColorList
+				colors={colors}
+			/>
 		</main>
 	)
 }

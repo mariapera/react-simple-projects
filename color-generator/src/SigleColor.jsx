@@ -1,7 +1,7 @@
 import { toast } from 'react-toastify'
 import PropTypes from 'prop-types'
 
-const SigleColor = ({ color, index }) => {
+const SigleColor = ({ color, index, colorsLength}) => {
 	const { hex, weight } = color
 	const saveToClipboard = async () => {
 		if (navigator.clipboard) {
@@ -17,7 +17,7 @@ const SigleColor = ({ color, index }) => {
 	}
 	return (
 		<article
-			className={`color ${index > 10 && 'color-light'}`}
+			className={`color ${index > colorsLength/2 && 'color-light'}`}
 			style={{ backgroundColor: `#${hex}` }}
 			onClick={saveToClipboard}>
 			<p>#{hex}</p>
@@ -29,5 +29,6 @@ const SigleColor = ({ color, index }) => {
 SigleColor.propTypes = {
 	color: PropTypes.object,
 	index: PropTypes.number,
+	colorsLength: PropTypes.number,
 }
 export default SigleColor
