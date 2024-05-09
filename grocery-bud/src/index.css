@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sedgwick+Ave+Display&display=swap');
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+	/* dark shades of primary color*/
+	--clr-primary-1: #dbedec;
+	--clr-primary-2: #b7dbda;
+	--clr-primary-3: #92c9c7;
+	--clr-primary-4: #6eb7b5;
+	/* primary/main color */
+	--clr-primary-5: #4aa5a2;
+	--clr-secondary-5: hsl(332, 79%, 59%);
+	/* lighter shades of primary color */
+	--clr-primary-6: #3b8482;
+	--clr-primary-7: #2c6361;
+	--clr-primary-8: #1e4241;
+	--clr-primary-9: #0f2120;
+
+	/* darkest grey - used for headings */
+	--clr-grey-1: #292929;
+	--clr-grey-2: #3e3e3e;
+	--clr-grey-3: #545454;
+	--clr-grey-4: #696969;
+	/* lighter grey - used for paragraphs */
+	--clr-grey-5: #7b7b80;
+	--clr-grey-6: #939499;
+	--clr-grey-7: #acacb3;
+	--clr-grey-8: #c4c5cc;
+	--clr-grey-9: #dddde6;
+	--clr-grey-10: #f5f6ff;
+
+	--clr-white: #ffffff;
+	--clr-red-dark: hsl(360, 67%, 44%);
+	--clr-red-light: hsl(360, 71%, 66%);
+	--clr-green-dark: hsl(125, 67%, 44%);
+	--clr-green-light: hsl(125, 71%, 66%);
+	--clr-black: #222;
+	--transition: all 0.3s linear;
+	--spacing: 0.1rem;
+	--radius: 0.25rem;
+	--light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	--max-width: 1170px;
+	--fixed-width: 620px;
+	--font-family: 'Open Sans', sans-serif;
+	--font-title: 'Sedgwick Ave Display', cursive;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: var(--font-family);
+	background: var(--clr-grey-10);
+	color: var(--clr-grey-1);
+	line-height: 1.5;
+	font-size: 0.875rem;
+}
+ul {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+	letter-spacing: var(--spacing);
+	text-transform: capitalize;
+	line-height: 1.25;
+	margin-bottom: 0.75rem;
+}
+h1 {
+	font-size: 3rem;
+}
+h2 {
+	font-size: 2rem;
+}
+h3 {
+	font-size: 1.25rem;
+}
+h4 {
+	font-size: 0.875rem;
+}
+p {
+	margin-bottom: 1.25rem;
+	color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+	h1 {
+		font-size: 4rem;
+	}
+	h2 {
+		font-size: 2.5rem;
+	}
+	h3 {
+		font-size: 1.75rem;
+	}
+	h4 {
+		font-size: 1rem;
+	}
+	body {
+		font-size: 1rem;
+	}
+	h1,
+	h2,
+	h3,
+	h4 {
+		line-height: 1;
+	}
+}
+/*  Global Classes */
+
+.img {
+	display: block;
+	width: 100%;
+	object-fit: cover;
+	aspect-ratio: 16/9;
+}
+
+.btn {
+	background: var(--clr-primary-5);
+	display: inline-block;
+	padding: 0.25rem 0.5rem;
+	border-radius: var(--radius);
+	text-transform: capitalize;
+	color: var(--clr-white);
+	letter-spacing: var(--spacing);
+	border: 1px solid transparent;
+	cursor: pointer;
+	font-size: 1.2rem;
+}
+
+.btn:hover {
+	background-color: var(--clr-primary-4);
+	color: var(--clr-white);
+}
+
+.btn-block {
+	color: #222222;
+	width: 100%;
+}
+
+.main {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/*
+=============== 
+Navigation
+===============
+*/
+.nav {
+	padding: 1rem 0 0.6rem;
+	background-color: var(--clr-white);
+	box-shadow: var(--light-shadow);
+}
+
+.nav-center {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+	.nav-center {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.nav-center {
+		width: 95vw;
+	}
+}
+
+.nav-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo-container h2 {
+	font-family: 'Gloria Hallelujah', cursive;
+	font-family: var(--font-title);
+	text-transform: capitalize;
+}
+
+.logo-container span {
+	color: var(--clr-primary-5);
+}
+
+.nav-toggle {
+	font-size: 1.6rem;
+	color: var(--clr-primary-5);
+	background-color: transparent;
+	border-color: transparent;
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.nav-toggle:hover {
+	transform: rotate(90deg);
+}
+
+.links-container {
+	overflow: hidden;
+	transition: var(--transition);
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	gap: 0 1.4rem;
+}
+
+.link-item {
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.link-item:hover {
+	padding-left: 2rem;
+	background-color: var(--clr-primary-5);
+}
+
+.link {
+	display: inline-block;
+	padding: 0.4rem 0;
+	font-size: 1rem;
+	color: var(--clr-grey-1);
+	text-transform: capitalize;
+}
+
+.link-item:hover .link {
+	color: var(--clr-white);
+}
+
+@media screen and (min-width: 768px) {
+	.nav-toggle {
+		display: none;
+	}
+
+	.links-container {
+		height: auto !important;
+	}
+
+	.links {
+		flex-direction: row;
+	}
+	
+.link-item:hover {
+	padding-left: 0;
+	background-color: transparent;
+}
+
+.link-item:hover .link {
+	color: var(--clr-primary-5);
+}
+}
+
+.social-container {
+	display: none;
+	gap: 0.8rem;
+}
+
+.social-icon {
+	font-size: 1.4rem;
+	color: var(--clr-primary-5);
+} 
+
+.social-icon:hover {
+	color: var(--clr-grey-5);
+}
+
+@media screen and (min-width: 992px) {
+	.social-container {
+		display: flex;
+	}
+}
+
+/*
+=============== 
+Grocery Bud
+===============
+*/
