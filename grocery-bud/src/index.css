@@ -161,6 +161,12 @@ p {
 	margin: 0 auto;
 }
 
+@media screen and (min-width: 992px) {
+	.main {
+		width: 95vw;
+	}
+}
+
 /*
 =============== 
 Navigation
@@ -266,15 +272,15 @@ Navigation
 	.links {
 		flex-direction: row;
 	}
-	
-.link-item:hover {
-	padding-left: 0;
-	background-color: transparent;
-}
 
-.link-item:hover .link {
-	color: var(--clr-primary-5);
-}
+	.link-item:hover {
+		padding-left: 0;
+		background-color: transparent;
+	}
+
+	.link-item:hover .link {
+		color: var(--clr-primary-5);
+	}
 }
 
 .social-container {
@@ -285,7 +291,7 @@ Navigation
 .social-icon {
 	font-size: 1.4rem;
 	color: var(--clr-primary-5);
-} 
+}
 
 .social-icon:hover {
 	color: var(--clr-grey-5);
@@ -302,3 +308,99 @@ Navigation
 Grocery Bud
 ===============
 */
+.section-grocery {
+	margin-top: 6rem;
+	display: flex;
+	justify-content: center;
+}
+
+.grocery {
+	padding: 2.5rem;
+	padding-bottom: 3rem;
+	width: 100%;
+	max-width: var(--fixed-width);
+	background-color: var(--clr-white);
+	border-radius: var(--radius);
+	box-shadow: var(--light-shadow);
+}
+
+.grocery h3 {
+	font-size: 2.2rem;
+	color: var(--clr-primary-5);
+	font-family: var(--font-title);
+	letter-spacing: calc(var(--spacing) * 2);
+	text-align: center;
+}
+
+.grocery-form {
+	margin-top: 1.5rem;
+	width: 100%;
+	display: flex;
+}
+
+.grocery-input {
+	flex-grow: 1;
+	padding: 0.5rem;
+	padding-left: 0.8rem;
+	font-size: 0.875rem;
+	background-color: var(--clr-grey-10);
+	border-color: transparent;
+	border-top-left-radius: var(--radius);
+	border-bottom-left-radius: var(--radius);
+}
+
+.grocery-input:focus {
+	outline: 1px solid var(--clr-primary-5);
+	outline-offset: -1px;
+}
+
+.add-btn {
+	font-size: 1.1rem;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.grocery-list {
+	margin-top: 3rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.grocery-item {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	column-gap: 1rem;
+}
+
+.grocery-checkbox {
+	width: 1.2rem;
+	height: 1.2rem;
+	cursor: pointer;
+}
+
+input[type='checkbox'] {
+	accent-color: var(--clr-primary-5);
+}
+
+.grocery-checkbox:checked + p.item-name {
+	text-decoration: line-through;
+}
+
+.item-name {
+	margin-bottom: 0;
+	font-size: 1rem;
+	color: var(--clr-grey-1);
+	text-transform: capitalize;
+}
+
+.delete-btn {
+	margin-left: auto;
+	font-size: 0.875rem;
+	background-color: var(--clr-grey-1);
+}
+
+.delete-btn:hover {
+	background-color: var(--clr-grey-4);
+}

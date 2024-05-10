@@ -1,4 +1,3 @@
-
 import Navbar from './Navbar'
 import GroceryBud from './GroceryBud'
 
